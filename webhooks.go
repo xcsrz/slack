@@ -9,8 +9,9 @@ import (
 )
 
 type WebhookMessage struct {
-	Text        string       `json:"text,omitempty"`
-	Attachments []Attachment `json:"attachments,omitempty"`
+	Text         string       `json:"text,omitempty"`
+	ResponseType string       `json:"response_type,omitempty"`
+	Attachments  []Attachment `json:"attachments,omitempty"`
 }
 
 func PostWebhook(url string, msg *WebhookMessage) error {
